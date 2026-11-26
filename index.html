@@ -102,46 +102,46 @@
     const { useState, useEffect } = React;
 
     // =========================================================================
-    // PERMANENT ASSETS REGISTRY (29 IMAGES + 2 OFFICIAL PDFs IN `images/`)
+    // PERMANENT ASSETS REGISTRY (ROOT DIRECTORY — NO `images/` FOLDER)
     // =========================================================================
     const ASSETS = {
-      logo: 'images/cml-logo.jpg',
-      flag: 'images/cml-flag.jpeg',
-      badge: 'images/cml-badge.png',
-      church: 'images/st-jude-church-mekkadambu.jpeg',
-      pdf2025: 'images/CML-Guidelines-2025-2026.pdf',
-      pdf2026: 'images/CML-Guidelines-2026-2027.pdf',
+      logo: 'cml-logo.jpg',
+      flag: 'cml-flag.jpeg',
+      badge: 'cml-badge.png',
+      church: 'st-jude-church-mekkadambu.jpeg',
+      pdf2025: 'CML-Guidelines-2025-2026.pdf',
+      pdf2026: 'CML-Guidelines-2026-2027.pdf',
       portraits: {
         // Eparchial Patrons & Curia
-        'mar-george-madathikandathil': 'images/bishop-george-madathikandathil.webp',
-        'mar-george-punnakottil': 'images/bishop-george-punnakottil.webp',
-        'msgr-pius-malekandathil': 'images/msgr-pius-malekandathil.jpg',
-        'msgr-vincent-nedungatt': 'images/msgr-vincent-nedungattu.jpg',
-        'msgr-kuriakose-kodakallil': 'images/msgr-kuriakose-kodakallil.jpg',
-        'fr-ramanattu-mathew': 'images/fr-mathew-ramanattu.jpg',
+        'mar-george-madathikandathil': 'bishop-george-madathikandathil.webp',
+        'mar-george-punnakottil': 'bishop-george-punnakottil.webp',
+        'msgr-pius-malekandathil': 'msgr-pius-malekandathil.jpg',
+        'msgr-vincent-nedungatt': 'msgr-vincent-nedungattu.jpg',
+        'msgr-kuriakose-kodakallil': 'msgr-kuriakose-kodakallil.jpg',
+        'fr-ramanattu-mathew': 'fr-mathew-ramanattu.jpg',
 
         // Unit Secretariat
-        'fr-george-marappillil': 'images/fr-george-marappillil.png',
-        'sr-anna-anit': 'images/sr-anna-anit.jpeg',
-        'emmanuel-sojan': 'images/emmanuel-sojan.jpeg',
+        'fr-george-marappillil': 'fr-george-marappillil.png',
+        'sr-anna-anit': 'sr-anna-anit.jpeg',
+        'emmanuel-sojan': 'emmanuel-sojan.jpeg',
 
         // Mekhala & Unit Executive Committee
-        'dhilna-sabu-animootil': 'images/dhilna-sabu.png',
-        'ann-mariya-antony': 'images/ann-mariya-antony.png',
-        'mathew-agustin': 'images/mathew-agustin.png',
-        'talfa-agustin': 'images/talfa-agustin.png',
-        'nirmala-rose-prince': 'images/nirmala-rose-prince.png',
-        'mihel-max': 'images/mihel-max.jpg',
-        'sanithamol-sabu': 'images/sanithamol-sabu.jpg',
-        'gloria-anil': 'images/gloria-anil.png',
-        'alby-sunil': 'images/alby-sunil.jpg',
-        'agnes-anish': 'images/agnes-anish.jpg',
-        'serra-mariya-sanal': 'images/serra-mariya-sanal.jpg',
-        'shybin-shyju': 'images/shybin-shyju.jpg',
-        'elna-sobin': 'images/elna-sobin.png',
-        'joseph-george': 'images/joseph-george.png',
-        'diya-manoj': 'images/diya-manoj.png',
-        'jeffin-jobin': 'images/jeffin-jobin.png'
+        'dhilna-sabu-animootil': 'dhilna-sabu.png',
+        'ann-mariya-antony': 'ann-mariya-antony.png',
+        'mathew-agustin': 'mathew-agustin.png',
+        'talfa-agustin': 'talfa-agustin.png',
+        'nirmala-rose-prince': 'nirmala-rose-prince.png',
+        'mihel-max': 'mihel-max.jpg',
+        'sanithamol-sabu': 'sanithamol-sabu.jpg',
+        'gloria-anil': 'gloria-anil.png',
+        'alby-sunil': 'alby-sunil.jpg',
+        'agnes-anish': 'agnes-anish.jpg',
+        'serra-mariya-sanal': 'serra-mariya-sanal.jpg',
+        'shybin-shyju': 'shybin-shyju.jpg',
+        'elna-sobin': 'elna-sobin.png',
+        'joseph-george': 'joseph-george.png',
+        'diya-manoj': 'diya-manoj.png',
+        'jeffin-jobin': 'jeffin-jobin.png'
       }
     };
 
@@ -1128,7 +1128,7 @@ Munneruvin`;
             'മധ്യസ്ഥ വിശുദ്ധ കൊച്ചുത്രേസ്യാ — സാധാരണ കാര്യങ്ങൾ അസാധാരണമായ സ്നേഹത്തോടെ ചെയ്യുന്ന "കുറുക്കുവഴി" (ചെറിയ വഴി) ലോകത്തിന് കാണിച്ചുതന്ന വിശുദ്ധ.',
           coPatronsLabel: 'ഉപമധ്യസ്ഥർ',
           coPatronsText:
-            'ഉപമധ്യസ്ഥർ വിശുദ്ധ തോമാശ്ലീഹാ, വിശുദ്ധ ഫ്രാൻസിസ് സേവിയർ, വിശുദ്ധ അൽഫോൻസാമ്മ.',
+            'ഉപമധ്യസ്ഥർ വിശുദ്ധ തോമാശ്ലീഹാ, വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ, വിശുദ്ധ അൽഫോൻസാമ്മ.',
           identityTitle: 'ആപ്തവാക്യവും മുദ്രാവാക്യവും ചിഹ്നവും',
           mottoLabel: 'ആപ്തവാക്യം',
           mottoQuote: '“ഭാരതമേ നിന്റെ രക്ഷ നിൻറെ സന്താനങ്ങളിൽ”',
@@ -1200,7 +1200,7 @@ Munneruvin`;
           ],
           chiefQuote: '“എന്റെ ദൈവവിളി സ്നേഹമാണ്! എന്റെ മാതാവായ തിരുസഭയുടെ ഹൃദയത്തിൽ ഞാൻ സ്നേഹമായിരിക്കും.”',
           chiefQuoteBy: 'വിശുദ്ധ കൊച്ചുത്രേസ്യാ',
-          coPatronsTitle: 'ഉപമധ്യസ്ഥർ വിശുദ്ധ തോമാശ്ലീഹാ, വിശുദ്ധ ഫ്രാൻസിസ് സേവിയർ, വിശുദ്ധ അൽഫോൻസാമ്മ',
+          coPatronsTitle: 'ഉപമധ്യസ്ഥർ വിശുദ്ധ തോമാശ്ലീഹാ, വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ, വിശുദ്ധ അൽഫോൻസാമ്മ',
           coPatrons: [
             {
               tag: 'ഉപമധ്യസ്ഥൻ',
@@ -1226,9 +1226,9 @@ Munneruvin`;
             },
             {
               tag: 'ഉപമധ്യസ്ഥൻ',
-              name: 'വിശുദ്ധ ഫ്രാൻസിസ് സേവിയർ',
+              name: 'വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ',
               intro:
-                'മിഷനുകളുടെ മധ്യസ്ഥനായ വിശുദ്ധ ഫ്രാൻസിസ് സേവിയർ ചെറുപുഷ്പ മിഷൻ ലീഗിന്റെ ഉപമധ്യസ്ഥനാണ്. ആത്മാക്കളെ നേടുന്നതിനുള്ള അദ്ദേഹത്തിന്റെ തീക്ഷ്ണതയും ഏഷ്യയിലുടനീളമുള്ള പ്രേഷിത യാത്രകളും യുവഹൃദയങ്ങളെ പ്രചോദിപ്പിക്കുന്നു.',
+                'മിഷനുകളുടെ മധ്യസ്ഥനായ വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ ചെറുപുഷ്പ മിഷൻ ലീഗിന്റെ ഉപമധ്യസ്ഥനാണ്. ആത്മാക്കളെ നേടുന്നതിനുള്ള അദ്ദേഹത്തിന്റെ തീക്ഷ്ണതയും ഏഷ്യയിലുടനീളമുള്ള പ്രേഷിത യാത്രകളും യുവഹൃദയങ്ങളെ പ്രചോദിപ്പിക്കുന്നു.',
               bullets: [
                 {
                   label: 'മിഷനുകളുടെ മധ്യസ്ഥൻ',
@@ -1244,7 +1244,7 @@ Munneruvin`;
                 }
               ],
               quote: '“ഒരുവൻ ലോകം മുഴുവൻ നേടിയാലും സ്വന്തം ആത്മാവിനെ നഷ്ടപ്പെടുത്തിയാൽ അവന് എന്ത് പ്രയോജനം?”',
-              quoteBy: 'വിശുദ്ധ ഫ്രാൻസിസ് സേവിയർ'
+              quoteBy: 'വിശുദ്ധ ഫ്രാൻസിസ് സേവ്യർ'
             },
             {
               tag: 'ഉപമധ്യസ്ഥ',
@@ -1417,7 +1417,7 @@ Munneruvin`;
             },
             {
               id: 'msgr-vincent-nedungatt',
-              name: 'മോൺ. വിൻസെന്റ് നെടുങ്ങാട്ട്',
+              name: 'വെരി റവ. ഫാ. വിൻസെന്റ് നെടുങ്ങാട്ട്',
               position: 'സിഞ്ചെല്ലൂസ്',
               description:
                 'കോതമംഗലം രൂപതയുടെ സിഞ്ചെല്ലൂസ് ആയി സേവനമനുഷ്ഠിച്ചുകൊണ്ട് രൂപതയിലെ അജപാലന-ഭരണ പ്രവർത്തനങ്ങളെ ഏകോപിപ്പിക്കുന്നു.'
@@ -1468,7 +1468,7 @@ Munneruvin`;
             {
               id: 'emmanuel-sojan',
               badge: 'സെക്രട്ടറിയേറ്റ് • പ്രസിഡന്റ് & ട്രഷറർ',
-              name: 'ശ്രീ. ഇമ്മാനുവൽ സോജൻ മണ്ണാംകുന്നേൽ',
+              name: 'ഇമ്മാനുവൽ സോജൻ മണ്ണാംകുന്നേൽ',
               position: 'പ്രസിഡന്റ്',
               description:
                 'ചെറുപുഷ്പ മിഷൻ ലീഗ് മേക്കടമ്പ് ശാഖയുടെ പ്രസിഡന്റായി സേവനമനുഷ്ഠിക്കുന്നു. പ്രസിഡന്റ് സ്ഥാനത്തിനൊപ്പം ട്രഷറർ സ്ഥാനം കൂടി വഹിക്കുകയും ശാഖയുടെ സാമ്പത്തിക കാര്യങ്ങൾ കൃത്യമായി കൈകാര്യം ചെയ്യുകയും ചെയ്യുന്നു.'
@@ -2255,7 +2255,7 @@ Munneruvin`;
             <p className="text-sm text-white/90 leading-relaxed">{m.unitBannerBody}</p>
           </section>
 
-          {/* Logo, Flag & Badge — PERMANENTLY EMBEDDED FROM `images/` */}
+          {/* Logo, Flag & Badge — PERMANENTLY EMBEDDED FROM ROOT DIRECTORY */}
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* 1. CML LOGO */}
             <div className="rounded-3xl bg-white/95 border border-antiqueGold/55 p-6 shadow-sm flex flex-col items-center text-center">
